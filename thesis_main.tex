@@ -31,6 +31,7 @@
 \langde{\usepackage[babel,german=quotes]{csquotes}}
 \langen{\usepackage[babel,english=british]{csquotes}}
 \usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
 \usepackage{fancybox}
 \usepackage[a4paper, left=4cm, right=2cm, top=4cm, bottom=3cm]{geometry}
 \usepackage{graphicx}
@@ -290,7 +291,6 @@ mincrossrefs = 1
 %-----------------------------------
 % Kopfbereich / Header definieren
 %-----------------------------------
-\usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 
@@ -299,7 +299,7 @@ mincrossrefs = 1
 }
 
 % Seitenzahl oben, links, entsprechend Leitfaden 
-\fancyhead[R]{\changefont \leftmark}
+\fancyhead[R]{\changefont \rightmark}
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\headrule}{\hbox to\headwidth{%
   \color{teal}\leaders\hrule height \headrulewidth\hfill}}
