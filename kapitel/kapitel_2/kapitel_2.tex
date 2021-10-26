@@ -4,15 +4,15 @@
 \subsection{Verwendete Software, Editor und Zusatzpakete}
 \subsubsection{Windows 8+}
 \begin{itemize}
-\item MikTex: 2.9, 32-bit
-\item Biblatex: 3.5, Zusatz: Biber.exe
-\item Editor: TexStudio (kann ich empfehlen), Notepad++
+	\item MikTex: 2.9, 32-bit
+	\item Biblatex: 3.5, Zusatz: Biber.exe
+	\item Editor: TexStudio (kann ich empfehlen), Notepad++
 \end{itemize}
 
 \subsubsection{Mac OSX und iOS}
 \begin{itemize}
-\item MacTeX: \url{https://tug.org/mactex}
-\item Editor: TexPad \url{https://www.texpadapp.com}
+	\item MacTeX: \url{https://tug.org/mactex}
+	\item Editor: TexPad \url{https://www.texpadapp.com}
 \end{itemize}
 
 \subsubsection{Online}
@@ -46,7 +46,7 @@ Dieses Package basiert auf python-pygments und unterstützt weit mehr Sprachkons
 Um das Paket zu verwenden muss es eingebunden werden und zusätzlich python-pygments installiert sein.
 (Dies ist mit im Dockerfile vorhanden. Für die anderen Compile-Methoden, wie das native verwenden von Tex Live findet sich hier die Installationsanleitung für das minted Paket: https://ctan.org/pkg/minted?lang=de)
 
-Damit das kompilieren ohne Python trotzdem möglich ist, ist die Funktion standardmäßig ausgebaut. Deshalb muss zusätzlich in der Datei \begin{verbatim}thesis_main.tex \usepackage{minted} \end{verbatim} wieder einkommentiert werden. 
+Damit das kompilieren ohne Python trotzdem möglich ist, ist die Funktion standardmäßig ausgebaut. Deshalb muss zusätzlich in der Datei \begin{verbatim}thesis_main.tex \usepackage{minted} \end{verbatim} wieder einkommentiert werden.
 
 Minted lässt sich dann ganz ähnlich zu lstlisting verwenden:
 \begin{lstlisting}
@@ -56,50 +56,50 @@ Minted lässt sich dann ganz ähnlich zu lstlisting verwenden:
 			return 0;
 		}
 	\end{minted}
-\end{lstlisting}	
+\end{lstlisting}
 
 Da der Pfad zu den Abbildungen im Hauptdokument definiert wurde, muss hier nur noch der Name des Bildes ohne Dateiendung stehen (sup).
 
 \begin{figure}[H]
-\caption{Titel der Abbildung hier}
-\includegraphics[width=0.9\textwidth]{sup}
-\\
-Quelle: Eigene Darstellung
+	\caption{Titel der Abbildung hier}
+	\includegraphics[width=0.9\textwidth]{sup}
+	\\
+	Quelle: Eigene Darstellung
 \end{figure}
 
 \subsection{Tabellen}
 \begin{table}[H]
-\caption{Beispieltabelle 1}
-\label{tbl:beispieltabelle2}
-\begin{tabularx}{\textwidth}[ht]{|l|X|l|}
-  \hline
-  \textbf{Abkürzung} & \textbf{Beschreibung} & \textbf{Berechnung}\\
-  \hline\hline
-    MEK & Materialeinzelkosten & \\
-  	MGK & Materialgemeinkosten & $+ \uparrow$~*\\
-    FEK & Fertigungseinzelkosten & \\
-  	FGK & Fertigungsgemeinkosten & $+ \uparrow$~*\\
-	SEKF & Sondereinzelkosten der Fertigung & \\
-	\hline\hline
-	\multicolumn{3}{|l|}{\textbf{= Herstellungskosten}} \\
-	\hline\hline
-  	VwGK & Verwaltungsgemeinkosten & $+ \uparrow$~*\\
-  	VtGK & Vertriebsgemeinkosten & $+ \uparrow$~*\\
-  	SEKVt & Sondereinzelkosten des Vertriebes & \\
-	\hline\hline
-	\multicolumn{3}{|l|}{\textbf{= Selbstkosten}} \\
-	\hline\hline
-	\multicolumn{3}{|l|}{+ Gewinnaufschlag} \\
-	\multicolumn{3}{|l|}{+ Rabatte} \\
-	\hline\hline
-	\multicolumn{3}{|l|}{\textbf{= Nettoverkaufspreis (NVP)}} \\
-	\hline
-	\multicolumn{3}{|l|}{+ Umsatzsteuer} \\
-	\hline\hline
-	\multicolumn{3}{|l|}{\textbf{= Bruttoverkaufspreis (BVP)}} \\
-	\hline
-\end{tabularx} \\
-\cite[Quelle: In Anlehnung an][S. 4]{Beckert.2012}
+	\caption{Beispieltabelle 1}
+	\label{tbl:beispieltabelle2}
+	\begin{tabularx}{\textwidth}[ht]{|l|X|l|}
+		\hline
+		\textbf{Abkürzung} & \textbf{Beschreibung}             & \textbf{Berechnung} \\
+		\hline\hline
+		MEK                & Materialeinzelkosten              &                     \\
+		MGK                & Materialgemeinkosten              & $+ \uparrow$~*      \\
+		FEK                & Fertigungseinzelkosten            &                     \\
+		FGK                & Fertigungsgemeinkosten            & $+ \uparrow$~*      \\
+		SEKF               & Sondereinzelkosten der Fertigung  &                     \\
+		\hline\hline
+		\multicolumn{3}{|l|}{\textbf{= Herstellungskosten}}                          \\
+		\hline\hline
+		VwGK               & Verwaltungsgemeinkosten           & $+ \uparrow$~*      \\
+		VtGK               & Vertriebsgemeinkosten             & $+ \uparrow$~*      \\
+		SEKVt              & Sondereinzelkosten des Vertriebes &                     \\
+		\hline\hline
+		\multicolumn{3}{|l|}{\textbf{= Selbstkosten}}                                \\
+		\hline\hline
+		\multicolumn{3}{|l|}{+ Gewinnaufschlag}                                      \\
+		\multicolumn{3}{|l|}{+ Rabatte}                                              \\
+		\hline\hline
+		\multicolumn{3}{|l|}{\textbf{= Nettoverkaufspreis (NVP)}}                    \\
+		\hline
+		\multicolumn{3}{|l|}{+ Umsatzsteuer}                                         \\
+		\hline\hline
+		\multicolumn{3}{|l|}{\textbf{= Bruttoverkaufspreis (BVP)}}                   \\
+		\hline
+	\end{tabularx} \\
+	\cite[Quelle: In Anlehnung an][S. 4]{Beckert.2012}
 \end{table}
 
 %\clearpage % hiermit werden alle Bilder Tabellen ausgeworfen
@@ -135,7 +135,7 @@ setzen.
 Diese Fussnote soll zeigen, wie mit einer Online-Quelle ohne Jahresangabe
 umgegangen wird\footcite[Vgl.][]{Belastingdienst}.
 
-Diese Fußnote\footcite[Vgl.][S.1]{Beckert.2012} ist nur dazu da zu zeigen, wie mit mehreren Quellen des selben Autors aus dem selben Jahr umgegangen wird, wenn das Stichwort gleich bleibt \footcite[Vgl.][S.2]{Beckert.2012.1} oder sich ändert\footcite[Vgl.][S.3]{Beckert.2012.2}. Laut Leitfaden sollte bei gleichem Autor, Jahr und Stichwort ein Buchstabe an die Jahreszahl gehangen werden. Zum Beispiel 2012a. 
+Diese Fußnote\footcite[Vgl.][S.1]{Beckert.2012} ist nur dazu da zu zeigen, wie mit mehreren Quellen des selben Autors aus dem selben Jahr umgegangen wird, wenn das Stichwort gleich bleibt \footcite[Vgl.][S.2]{Beckert.2012.1} oder sich ändert\footcite[Vgl.][S.3]{Beckert.2012.2}. Laut Leitfaden sollte bei gleichem Autor, Jahr und Stichwort ein Buchstabe an die Jahreszahl gehangen werden. Zum Beispiel 2012a.
 
 Die folgenden Fußnoten dienen dazu zu zeigen, dass die Nummern von zwei direkt aufeinanderfolgende Fußnoten mit Komma getrennt werden.\footcite[Vgl.][S.2]{Beckert.2012.1}\footcite[Vgl.][S. 1]{Lucke2018}
 \subsection{Abkürzungen}
@@ -152,7 +152,7 @@ Um eine Formel nach links aus zurichten muss sie zwischen \& und \& eingesetzt w
 
 \textbf{Formel 1: Erste Formel}
 \begin{flalign}
-   & L_P{=} 10lg \cdot \frac{P}{1 mW} &
+	& L_P{=} 10lg \cdot \frac{P}{1 mW} &
 \end{flalign}
 \cite[Quelle: In Anlehnung an][S. 4]{Beckert.2012}
 
@@ -164,13 +164,13 @@ Ansonsten wird sie mittig ausgerichtet test.
 
 \textbf{Formel 2: Zweite Formel}
 \begin{flalign}
-   L_P{=} 10lg \cdot \frac{P}{1 mW}
+	L_P{=} 10lg \cdot \frac{P}{1 mW}
 \end{flalign}
 \cite[Quelle: In Anlehnung an][S. 4]{Beckert.2012}
 
 \subsection{Symbole}
 % die folgenden Symbole haben nicht mit der Formel oben drüber zu tun
-Das hier ist ein definiertes Symbol: \symnz und das hier auch \AB . Symbole werden in der Datei Skripte symboldef.tex zentral definiert.
+% Das hier ist ein definiertes Symbol: \symnz und das hier auch \AB . Symbole werden in der Datei Skripte symboldef.tex zentral definiert.
 
 \subsection{Glossar}
 Begriffserklärungen bzw. das \gls{glossar} wird mithilfe des Pakets \gls{glossaries} eingebunden. Alle Begriffe die erklärt werden sollen, sollten in der Datei glossar.tex mithilfe des \begin{verbatim}
@@ -183,15 +183,15 @@ Begriffserklärungen bzw. das \gls{glossar} wird mithilfe des Pakets \gls{glossa
 \subsection{Listen und Aufzählungen}
 \subsubsection{Listen}
 \begin{itemize}
-\item ein wichtiger Punkt
-\item noch ein wichtiger Punkt
-\item und so weiter
+	\item ein wichtiger Punkt
+	\item noch ein wichtiger Punkt
+	\item und so weiter
 \end{itemize}
 \subsubsection{Aufzählungen}
 \begin{enumerate}
-\item Reihenfolge ist hier wichtig
-\item Dieser Punkt kommt nach dem ersten
-\item Da sollte jetzt eine 3 vorne stehen
+	\item Reihenfolge ist hier wichtig
+	\item Dieser Punkt kommt nach dem ersten
+	\item Da sollte jetzt eine 3 vorne stehen
 \end{enumerate}
 
 \paragraph{Tiefste Ebene 1}

@@ -7,6 +7,7 @@ doi=false,
 eprint=false,
 maxbibnames=7, % Alle Autoren (kein et al.)
 maxcitenames=2, % et al. ab dem 3. Autor
+mincitenames=1,
 backref=false, % Rückverweise auf Zitatseiten
 bibencoding=utf8, % wenn .bib in utf8, sonst ascii
 bibwarn=true, % Warnung bei fehlerhafter bib-Datei
@@ -17,20 +18,31 @@ bibwarn=true, % Warnung bei fehlerhafter bib-Datei
    andothers = {{et\,al\adddot}},
 }
 
-% Klammern um das Jahr in der Fußnote
-\renewbibmacro*{cite:labelyear+extrayear}{%
-  \iffieldundef{labelyear}
-    {}
-    {\printtext[bibhyperref]{%
-       \mkbibparens{%
-         \printfield{labelyear}%
-         \printfield{extrayear}}}}}
+%% et al. anstatt u. a. bei mehr als drei Autoren.
+\DefineBibliographyStrings{ngerman}{ 
+	andothers = {{et\,al\adddot}},             
+}
+\DefineBibliographyStrings{english}{ 
+	andothers = {{et\,al\adddot}},             
+}
 
-\renewbibmacro*{cite:title}{%
-  \printtext[bibhyperref]{%
-    \printfield[citetitle]{labeltitle}%
-    \setunit{\addcomma\space}%
-    \printdate}}
+
+% Klammern um das Jahr in der Fußnote
+% Package biblatex Warning: Macro 'cite:labelyear+extrayear' undefined. Using \newbibmacro on input line 31.
+%\renewbibmacro*{cite:labelyear+extrayear}{%
+%  \iffieldundef{labelyear}
+%    {}
+%    {\printtext[bibhyperref]{%
+%       \mkbibparens{%
+%         \printfield{labelyear}%
+%         \printfield{extrayear}}}}}
+
+% Package biblatex Warning: Macro 'cite:title' undefined. Using \newbibmacro on input line 39.
+%\renewbibmacro*{cite:title}{%
+%  \printtext[bibhyperref]{%
+%    \printfield[citetitle]{labeltitle}%
+%    \setunit{\addcomma\space}%
+%    \printdate}}
 
 \DeclareNameFormat{last-first}{%
   \iffirstinits
