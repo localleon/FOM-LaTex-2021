@@ -1,0 +1,24 @@
+\begin{titlepage}
+    % define background picture and title page
+	\newgeometry{left=2.7cm, right=9.2cm, top=3.5cm, bottom=4cm}
+    \AddToShipoutPicture*{\BackgroundPic}
+    \color{teal}{
+    % Information 
+        \begin{huge}
+        \begin{spacing}{1.125}
+            \setstretch{1.0}
+            {\myTitel}
+        \end{spacing}
+        \end{huge}
+        % horizontale Linie setzen
+        \par\noindent\rule{\textwidth}{2pt}
+        
+        % datum und name getrennt durch spacing mit Authorenname
+        \vspace{40em}
+        
+        \today
+        \par\noindent\rule{\textwidth}{2pt}
+        % email adresse 
+        \myVorname.\myNachname@fom-net.de
+    }
+\end{titlepage}
