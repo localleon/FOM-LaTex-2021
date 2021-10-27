@@ -33,7 +33,17 @@
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
 \usepackage{fancybox}
-\usepackage[a4paper, left=4cm, right=2cm, top=4cm, bottom=3cm]{geometry}
+
+% SEITENFORMAT %% 
+% header/footer = 140mm 
+%  Oben: 4 cm (sowie einen Abstand vom Seitenrand der Kopfzeile: 2 cm),
+%  Unten: 2 cm (sowie einen Abstand vom Seitenrand der Fußzeile: 2 cm),
+% Links: 4 cm,
+%  Rechts: 2 cm.
+
+\usepackage[a4paper, left=4cm, right=2cm, top=3.8cm, bottom=3cm,footskip=1cm,headsep=1cm]{geometry}
+
+% weitere Pakete
 \usepackage{graphicx}
 \usepackage{colortbl}
 \usepackage[capposition=top]{floatrow}
@@ -300,12 +310,12 @@ mincrossrefs = 1
 }
 
 % Header Seitenzahl oben, links, entsprechend Leitfaden , kein Abstand zur Linie setzen
-\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\changefont \leftmark}}
-\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\changefont \nouppercase\leftmark}}
+\renewcommand{\headrulewidth}{1.5pt}
 
 % Footer, set font lower 
 \fancyfoot[R]{\changefont \textcolor{gray}{\myTitel} | \textcolor{teal}{\thepage}}
-\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1.5pt}
 
 % these rules set the header color and footer 
 \renewcommand{\headrule}{\hbox to\headwidth{%
