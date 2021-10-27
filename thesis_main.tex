@@ -294,20 +294,22 @@ mincrossrefs = 1
 \pagestyle{fancy}
 \fancyhf{}
 
+% define font size of both header and footer 
 \newcommand{\changefont}{%
-    \fontsize{10}{11}\selectfont
+    \fontsize{12}{11}\selectfont
 }
 
-% Seitenzahl oben, links, entsprechend Leitfaden 
-\fancyhead[R]{\nouppercase{\changefont \leftmark}}
-\renewcommand{\headrulewidth}{2pt}
+% Header Seitenzahl oben, links, entsprechend Leitfaden , kein Abstand zur Linie setzen
+\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\changefont \leftmark}}
+\renewcommand{\headrulewidth}{1pt}
+
+% Footer, set font lower 
+\fancyfoot[R]{\changefont \textcolor{gray}{\myTitel} | \textcolor{teal}{\thepage}}
+\renewcommand{\footrulewidth}{1pt}
+
+% these rules set the header color and footer 
 \renewcommand{\headrule}{\hbox to\headwidth{%
   \color{teal}\leaders\hrule height \headrulewidth\hfill}}
-\setlength{\headheight}{25pt}
-
-% Footer 
-\fancyfoot[R]{\textcolor{gray}{\myTitel} | \textcolor{teal}{\thepage}}
-\renewcommand{\footrulewidth}{1pt}
 \renewcommand{\footrule}{\hbox to\headwidth{
     \color{teal}\leaders\hrule height \footrulewidth\hfill}}
 
