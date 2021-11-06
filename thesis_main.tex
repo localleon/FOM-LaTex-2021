@@ -160,7 +160,8 @@ urldate=iso,
 dashed=false,
 autocite=inline,
 useprefix=true, % 'von' im Namen beachten (beim Anzeigen)
-mincrossrefs = 1
+mincrossrefs = 1,
+defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 ]{biblatex}%iso dateformat für YYYY-MM-DD
 
 
@@ -310,7 +311,7 @@ mincrossrefs = 1
 }
 
 % Header Seitenzahl oben, links, entsprechend Leitfaden , kein Abstand zur Linie setzen
-\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\changefont \nouppercase\leftmark}}
+\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\changefont \rightmark}}
 \renewcommand{\headrulewidth}{1.5pt}
 
 % Footer, set font lower 
