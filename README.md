@@ -6,8 +6,8 @@ Eine [LaTeX](https://de.wikipedia.org/wiki/LaTeX)-Vorlage für den persönlichen
 
 Wie das **Ergebnis** aussieht, könnt ihr euch in der Datei [*thesis_main.pdf*](./thesis_main.pdf) ansehen.
 
-Diese Vorlage hat weder einen Anspruch auf Richtigkeit, noch auf Vollständigkeit.
-Verbesserungen sind jederzeit willkommen (siehe [Ich möchte mithelfen, diese Vorlage zu verbessern](#ich-möchte-mithelfen-diese-vorlage-zu-verbessern)).
+Diese Vorlage hat weder einen Anspruch auf Richtigkeit, noch auf Vollständigkeit (ITM-Leitfaden Version 1.2).
+Verbesserungen sind jederzeit willkommen (siehe [Ich möchte mithelfen, diese Vorlage zu verbessern](#ich-möchte-mithelfen-diese-vorlage-zu-verbessern)). Dies ist ein Fork von https://github.com/andygrunwald/FOM-LaTeX-Template, welches meine persönlichen Bedürfnisse und Designentscheidungen wiederspiegelt. 
 
 ---
 
