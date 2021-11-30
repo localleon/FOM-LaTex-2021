@@ -150,7 +150,7 @@
 %%%% Neuer Leitfaden IEEE
 \usepackage[
 backend=biber,
-style=ieee,
+style=apa,
 sorting=nty, % sortierung nach name, titel , jahr 
 maxcitenames=3,	% mindestens 3 Namen ausgeben bevor et. al. kommt
 maxbibnames=999,
@@ -475,7 +475,7 @@ defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 % noch weitere Arten von Zusammenfassungen eines Literaturverzeichnisse zu
 % erzeugen.
 % Beispiel: [type=book,type=article]
-\printbibliography[nottype=online,heading=bibintoc,title={\langde{Literaturverzeichnis}\langen{Bibliography}}]
+\printbibliography[heading=bibintoc,title={\langde{Literaturverzeichnis}\langen{Bibliography}}]
 
 % neue Seite für Internetquellen-Verzeichnis
 \newpage
@@ -485,7 +485,7 @@ defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 % Die Option heading=bibintoc würde die Internetquelle als eigenen Eintrag im
 % Inhaltsverzeicnis anzeigen.
 %\printbibliography[type=online,heading=bibintoc,title={\headingNameInternetSources}]
-\printbibliography[type=online,heading=subbibliography,title={\headingNameInternetSources}]
+% \printbibliography[type=online,heading=subbibliography,title={\headingNameInternetSources}]
 
 \input{kapitel/anhang/erklaerung}
 \end{document}

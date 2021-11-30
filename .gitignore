@@ -22,5 +22,9 @@
 *.synctex.gz
 *.toc
 
+# Wir brauchen das pdf Thesis Dokument nicht als PDF 
+thesis_main.pdf
+
+
 # IDEs
 .texpadtmp/

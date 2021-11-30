@@ -1,29 +1,28 @@
 % Opptionen für Biblatex
 \ExecuteBibliographyOptions{%
-giveninits=false,
-isbn=true,
-url=true,
-doi=false,
-eprint=false,
-maxbibnames=7, % Alle Autoren (kein et al.)
-maxcitenames=2, % et al. ab dem 3. Autor
-mincitenames=1,
-backref=false, % Rückverweise auf Zitatseiten
-bibencoding=utf8, % wenn .bib in utf8, sonst ascii
-bibwarn=true, % Warnung bei fehlerhafter bib-Datei
+  giveninits=false,
+  isbn=true,
+  url=true,
+  doi=false,
+  eprint=false,
+  maxcitenames=2, % et al. ab dem 3. Autor
+  mincitenames=1,
+  backref=false, % Rückverweise auf Zitatseiten
+  bibencoding=utf8, % wenn .bib in utf8, sonst ascii
+  bibwarn=true, % Warnung bei fehlerhafter bib-Datei
 }%
 
 % et al. an Stelle von u.a.
 \DefineBibliographyStrings{ngerman}{
-   andothers = {{et\,al\adddot}},
+  andothers = {{et\,al\adddot}},
 }
 
 %% et al. anstatt u. a. bei mehr als drei Autoren.
-\DefineBibliographyStrings{ngerman}{ 
-	andothers = {{et\,al\adddot}},             
+\DefineBibliographyStrings{ngerman}{
+  andothers = {{et\,al\adddot}},
 }
-\DefineBibliographyStrings{english}{ 
-	andothers = {{et\,al\adddot}},             
+\DefineBibliographyStrings{english}{
+  andothers = {{et\,al\adddot}},
 }
 
 
@@ -46,30 +45,30 @@ bibwarn=true, % Warnung bei fehlerhafter bib-Datei
 
 \DeclareNameFormat{last-first}{%
   \iffirstinits
-    {\usebibmacro{name:family-given}
-        {\namepartfamily}
-        {\namepartgiveni}
-        {\namepartprefix}
-        {\namepartsuffix}
-    }
-    {\usebibmacro{name:family-given}
-        {\namepartfamily}
-        {\namepartgiven}
-        {\namepartprefix}
-        {\namepartsuffix}
-    }%
+  {\usebibmacro{name:family-given}
+    {\namepartfamily}
+    {\namepartgiveni}
+    {\namepartprefix}
+    {\namepartsuffix}
+  }
+  {\usebibmacro{name:family-given}
+    {\namepartfamily}
+    {\namepartgiven}
+    {\namepartprefix}
+    {\namepartsuffix}
+  }%
   \usebibmacro{name:andothers}}
 
 % Alternative Notation der Fußnoten
 % Zeigt sowohl den Nachnamen als auch den Vornamen an
 % Beispiel: \fullfootcite[Vgl. ][Seite 5]{Tanenbaum.2003}
 \DeclareCiteCommand{\fullfootcite}[\mkbibfootnote]
-  {\usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-    \printnames[sortname][1-1]{author}%
-    \addspace (\printfield{year})}
-  {\addsemicolon\space}
-  {\usebibmacro{postnote}}
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+  \printnames[sortname][1-1]{author}%
+  \addspace (\printfield{year})}
+{\addsemicolon\space}
+{\usebibmacro{postnote}}
 
 %Autoren (Nachname, Vorname)
 \DeclareNameAlias{default}{family-given}
@@ -122,18 +121,18 @@ bibwarn=true, % Warnung bei fehlerhafter bib-Datei
 
 %% Definiert @InProceedings Eintrag
 \DeclareBibliographyDriver{inproceedings}{%
-	\printnames{author}%
-	\setunit*{,\space (}%
-	\printfield{year}\newunit{)}%
-	\newunit\newblockpunct
-	\printfield{title}%
-	\setunit*{\space}%
-	\usebibmacro{booktitle}%
-	\setunit*{,\space}%
-	\printfield{isbn}%
-	\setunit*{,\space}%
-	\printfield{doi}%
-	\finentry}
+  \printnames{author}%
+  \setunit*{,\space (}%
+  \printfield{year}\newunit{)}%
+  \newunit\newblockpunct
+  \printfield{title}%
+  \setunit*{\space}%
+  \usebibmacro{booktitle}%
+  \setunit*{,\space}%
+  \printfield{isbn}%
+  \setunit*{,\space}%
+  \printfield{doi}%
+  \finentry}
 
 %Doppelpunkt nach dem letzten Autor
 \renewcommand*{\labelnamepunct}{\addcolon\addspace }
