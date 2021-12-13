@@ -134,6 +134,46 @@
   \printfield{doi}%
   \finentry}
 
+
+%Aufräumen die Felder werden laut Leitfaden nicht benötigt.
+\AtEveryBibitem{%
+  \ifentrytype{book}{
+    \clearfield{issn}%
+    \clearfield{doi}%
+    \clearfield{isbn}%
+    \clearfield{url}
+    \clearfield{eprint}
+  }{}
+  \ifentrytype{collection}{
+    \clearfield{issn}%
+    \clearfield{doi}%
+    \clearfield{isbn}%
+    \clearfield{url}
+    \clearfield{eprint}
+  }{}
+  \ifentrytype{incollection}{
+    \clearfield{issn}%
+    \clearfield{doi}%
+    \clearfield{isbn}%
+    \clearfield{url}
+    \clearfield{eprint}
+  }{}
+  \ifentrytype{article}{
+    \clearfield{issn}%
+    \clearfield{doi}%
+    \clearfield{isbn}%
+    \clearfield{url}
+    \clearfield{eprint}
+  }{}
+  \ifentrytype{inproceedings}{
+    \clearfield{issn}%
+    \clearfield{doi}%
+    \clearfield{isbn}%
+    \clearfield{url}
+    \clearfield{eprint}
+  }{}
+}
+
 %Doppelpunkt nach dem letzten Autor
 \renewcommand*{\labelnamepunct}{\addcolon\addspace }
 
@@ -150,3 +190,5 @@
 
 %Titel nicht kursiv anzeigen
 \DeclareFieldFormat{title}{#1\isdot}
+
+
