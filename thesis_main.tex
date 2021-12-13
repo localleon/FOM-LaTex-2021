@@ -32,7 +32,6 @@
 \langen{\usepackage[babel,english=british]{csquotes}}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
-\usepackage{fancybox}
 
 % SEITENFORMAT %% 
 % header/footer = 140mm 
@@ -41,7 +40,7 @@
 % Links: 4 cm,
 %  Rechts: 2 cm.
 
-\usepackage[a4paper, left=4cm, right=2cm, top=4cm, bottom=2cm,footskip=1cm,footnotesep=1cm,headsep=2cm]{geometry}
+\usepackage[a4paper, left=4cm, right=2cm, top=4cm, bottom=2cm,footskip=1cm]{geometry}
 
 % weitere Pakete
 \usepackage{graphicx}
@@ -316,13 +315,10 @@ defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 
 % Footer, set font lower 
 \fancyfoot[R]{\changefont \textcolor{gray}{\myTitel} | \textcolor{teal}{\thepage}}
-\renewcommand{\footrulewidth}{1.5pt}
 
-% these rules set the header color and footer 
+% these rules set the header color 
 \renewcommand{\headrule}{\hbox to\headwidth{%
   \color{teal}\leaders\hrule height \headrulewidth\hfill}}
-\renewcommand{\footrule}{\hbox to\headwidth{
-    \color{teal}\leaders\hrule height \footrulewidth\hfill}}
 
 %-----------------------------------
 % Damit die hochgestellten Zahlen auch auf die Fußnote verlinkt sind (siehe Issue 169)
