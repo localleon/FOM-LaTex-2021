@@ -31,7 +31,6 @@
 \langde{\usepackage[babel,german=quotes]{csquotes}}
 \langen{\usepackage[babel,english=british]{csquotes}}
 \usepackage[T1]{fontenc}
-\usepackage{fancyhdr}
 
 % SEITENFORMAT %% 
 % header/footer = 140mm 
@@ -146,20 +145,23 @@
 \usepackage{url}
 \urlstyle{same}
 
-%%%% Neuer Leitfaden IEEE
+%%%% Neuer Leitfaden (2018)
 \usepackage[
 backend=biber,
-style=apa,
-sorting=nty, % sortierung nach name, titel , jahr 
+style=ext-authoryear-ibid, % Auskommentieren und nächste Zeile einkommentieren, falls "Ebd." (ebenda) nicht für sich-wiederholende Fussnoten genutzt werden soll.
+%style=ext-authoryear,
+maxcitenames=3,	% mindestens 3 Namen ausgeben bevor et. al. kommt
 maxbibnames=999,
+mergedate=false,
 date=iso,
 seconds=true, %werden nicht verwendet, so werden aber Warnungen unterdrückt.
 urldate=iso,
+innamebeforetitle,
 dashed=false,
-autocite=inline,
+autocite=footnote,
+doi=false,
 useprefix=true, % 'von' im Namen beachten (beim Anzeigen)
-mincrossrefs = 1,
-defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
+mincrossrefs = 1
 ]{biblatex}%iso dateformat für YYYY-MM-DD
 
 
@@ -300,24 +302,19 @@ defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 %-----------------------------------
 % Kopfbereich / Header definieren
 %-----------------------------------
-\pagestyle{fancy}
-\fancyhf{}
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
 
-% define font size of both header and footer 
-\newcommand{\changefont}{%
-    \fontsize{12}{11}\selectfont
-}
+% Header Linie in Teal, 1pt Dick , mit \subsection namen rechts 
+\rohead{\upshape \rightmark}
+\KOMAoptions{headsepline=1pt}
+\addtokomafont{headsepline}{\color{teal}}
 
-% Header Seitenzahl oben, links, entsprechend Leitfaden , kein Abstand zur Linie setzen
-\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\changefont \rightmark}}
-\renewcommand{\headrulewidth}{1.5pt}
+% Footer Seitenzahl rechts, Arbeitstitel links 
+\usepackage{lastpage}
+\rofoot{\textcolor{teal}{\thepage}}
+\lofoot{\upshape \textcolor{gray}{\myTitel}}
 
-% Footer, set font lower 
-\fancyfoot[R]{\changefont \textcolor{gray}{\myTitel} | \textcolor{teal}{\thepage}}
-
-% these rules set the header color 
-\renewcommand{\headrule}{\hbox to\headwidth{%
-  \color{teal}\leaders\hrule height \headrulewidth\hfill}}
 
 %-----------------------------------
 % Damit die hochgestellten Zahlen auch auf die Fußnote verlinkt sind (siehe Issue 169)
