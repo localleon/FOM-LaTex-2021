@@ -31,8 +31,6 @@
 \langde{\usepackage[babel,german=quotes]{csquotes}}
 \langen{\usepackage[babel,english=british]{csquotes}}
 \usepackage[T1]{fontenc}
-\usepackage{fancyhdr}
-\usepackage{fancybox}
 
 % SEITENFORMAT %% 
 % header/footer = 140mm 
@@ -302,27 +300,19 @@ defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 %-----------------------------------
 % Kopfbereich / Header definieren
 %-----------------------------------
-\pagestyle{fancy}
-\fancyhf{}
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
 
-% define font size of both header and footer 
-\newcommand{\changefont}{%
-    \fontsize{12}{11}\selectfont
-}
+% Header Linie in Teal, 1pt Dick , mit \subsection namen rechts 
+\rohead{\upshape \rightmark}
+\KOMAoptions{headsepline=1pt}
+\addtokomafont{headsepline}{\color{teal}}
 
-% Header Seitenzahl oben, links, entsprechend Leitfaden , kein Abstand zur Linie setzen
-\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\changefont \rightmark}}
-\renewcommand{\headrulewidth}{1.5pt}
+% Footer Seitenzahl rechts, Arbeitstitel links 
+\usepackage{lastpage}
+\rofoot{\textcolor{teal}{\thepage}}
+\lofoot{\upshape \textcolor{gray}{\myTitel}}
 
-% Footer, set font lower 
-\fancyfoot[R]{\changefont \textcolor{gray}{\myTitel} | \textcolor{teal}{\thepage}}
-\renewcommand{\footrulewidth}{1.5pt}
-
-% these rules set the header color and footer 
-\renewcommand{\headrule}{\hbox to\headwidth{%
-  \color{teal}\leaders\hrule height \headrulewidth\hfill}}
-\renewcommand{\footrule}{\hbox to\headwidth{
-    \color{teal}\leaders\hrule height \footrulewidth\hfill}}
 
 %-----------------------------------
 % Damit die hochgestellten Zahlen auch auf die Fußnote verlinkt sind (siehe Issue 169)
