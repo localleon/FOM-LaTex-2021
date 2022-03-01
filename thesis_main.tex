@@ -149,17 +149,6 @@
 \usepackage[
 backend=biber,
 style=ieee,
-sorting=nty, % sortierung nach name, titel , jahr 
-maxcitenames=3,	% mindestens 3 Namen ausgeben bevor et. al. kommt
-maxbibnames=999,
-date=iso,
-seconds=true, %werden nicht verwendet, so werden aber Warnungen unterdrückt.
-urldate=iso,
-dashed=false,
-autocite=inline,
-useprefix=true, % 'von' im Namen beachten (beim Anzeigen)
-mincrossrefs = 1,
-defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 ]{biblatex}%iso dateformat für YYYY-MM-DD
 
 
@@ -406,6 +395,10 @@ defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 %-----------------------------------
 \input{skripte/kapitelUebersicht.tex}
 
+% We ignore everything for the word count after our fazit
+%TC:ignore
+
+
 %-----------------------------------
 % Apendix / Anhang
 %-----------------------------------
@@ -478,4 +471,9 @@ defernumbers=true % Geteilte Literaturverzeichnisse gemeinsam nummerieren
 \printbibliography[type=online,heading=subbibliography,title={\headingNameInternetSources}]
 
 \input{kapitel/anhang/erklaerung}
+
+% Stop texcount ignore 
+%TC:endignore
+
 \end{document}
+
