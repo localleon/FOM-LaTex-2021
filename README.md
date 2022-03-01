@@ -37,6 +37,7 @@ Verbesserungen sind jederzeit willkommen. Dies ist ein Fork von https://github.c
   - [/tools](#tools)
   - [Disclaimer](#disclaimer)
   - [Lizenz](#lizenz)
+    - [TexCount v3.2](#texcount-v32)
 
 ## Für die eigene Arbeit nutzen
 
@@ -248,7 +249,7 @@ Zum Einbinden dieser Vorlage in Overleaf gibt es zwei Möglichkeiten:
 Gerade bei der Verwendung eines Texteditors ist das Zählen der Wörter unter umständen eine mühselige Aufgabe. Mit den folgenden Vorschlägen kann man die Wörter der Arbeit zählen:
 
 - Über die Seite [TeXcount](https://app.uio.no/ifi/texcount/online.php) können Latex Dateien hochgeladen und gezählt werden.
-- Unter Unix und macOS kann das mitgelieferte Script helfen die Wörter zu zählen. Dafür muss nur [detex](https://github.com/pkubowicz/opendetex) installiert werden. Unter macOS kann `detex` mittels [homebrew](https://brew.sh/index_de) über den Befehl `brew install opendetex` installiert werden. Das Skript wird einfach über `sh ./countwords.sh` gestartet.
+- Unter Unix und macOS kann das mitgelieferte Script helfen die Wörter zu zählen. Dafür muss nur `perl` installiert sein. Das Skript wird einfach über `sh ./countwords.sh` gestartet und führt die entsprechenden Perl-Skripte zum Zählen der Wörter aus. 
 
 ## /tools 
 
@@ -263,3 +264,18 @@ Einzelne Standorte und Professoren stellen abgeänderte Leitfäden bereit.
 ## Lizenz
 
 Dieses Projekt ist unter den Bedingungen der [MIT Lizenz](http://en.wikipedia.org/wiki/MIT_License) öffentlich verfügbar.
+
+Folgende Software ist im Projekt inkludiert 
+
+### TexCount v3.2 
+```
+TeXcount version 3.2
+
+Copyright 2008-2020 Einar Andreas Rodland
+
+The TeXcount script is published under the LaTeX Project Public License (LPPL)
+  https://www.latex-project.org/lppl.txt
+which grants you, the user, the right to use, modify and distribute the script. However, if the script is modified, you
+must change its name or use other technical means to avoid confusion.
+
+The script has LPPL status "maintained" with Einar Andreas Rodland being the current maintainer.```
