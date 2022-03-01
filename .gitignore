@@ -22,5 +22,8 @@
 *.synctex.gz
 *.toc
 
+# nicht die finale pdf datei automatisch commiten
+thesis_main.pdf
+
 # IDEs
 .texpadtmp/

@@ -1,49 +1,42 @@
-# LaTeX-Vorlage für die FOM Hochschule für Oekonomie & Management
+# LaTeX-Vorlage für die FOM Hochschule für Oekonomie & Management - ITM Leitfaden
 
 [![Build](https://github.com/andygrunwald/FOM-LaTeX-Template/actions/workflows/Check.yml/badge.svg)](https://github.com/andygrunwald/FOM-LaTeX-Template/actions/workflows/Check.yml)
 
-Eine [LaTeX](https://de.wikipedia.org/wiki/LaTeX)-Vorlage für den persönlichen Gebrauch für Haus-, Seminar-, Bachelor und Master-Arbeiten an der [FOM Hochschule für Oekonomie & Management](https://www.fom.de/).
+Eine [LaTeX](https://de.wikipedia.org/wiki/LaTeX)-Vorlage für den persönlichen Gebrauch für Haus-, Seminar-, Bachelor und Master-Arbeiten an der [FOM Hochschule für Oekonomie & Management](https://www.fom.de/). Das Template entspricht dem aktuellen Stand des Leitfadens ITM in Version 1.2.
 
 Wie das **Ergebnis** aussieht, könnt ihr euch in der Datei [*thesis_main.pdf*](./thesis_main.pdf) ansehen.
 
 Diese Vorlage hat weder einen Anspruch auf Richtigkeit, noch auf Vollständigkeit (ITM-Leitfaden Version 1.2).
-Verbesserungen sind jederzeit willkommen (siehe [Ich möchte mithelfen, diese Vorlage zu verbessern](#ich-möchte-mithelfen-diese-vorlage-zu-verbessern)). Dies ist ein Fork von https://github.com/andygrunwald/FOM-LaTeX-Template, welches meine persönlichen Bedürfnisse und Designentscheidungen wiederspiegelt. 
+Verbesserungen sind jederzeit willkommen. Dies ist ein Fork von https://github.com/andygrunwald/FOM-LaTeX-Template, welches meine persönlichen Bedürfnisse und Designentscheidungen wiederspiegelt. 
+
 
 ---
 
 ## Inhaltsverzeichnis
 
-1. [Für die eigene Arbeit nutzen](#für-die-eigene-arbeit-nutzen)
-    1. [Klassischer Download](#klassischer-download)
-    2. [Fork auf Github](#fork-auf-github)
-1. [Vorlage personalisieren](#vorlage-personalisieren)
-1. [Dokumentensprache](#dokumentensprache)
-1. [TextCommands](#textcommands)
-1. [Zitation](#zitation)
-    1. [Chicago-Style in Fußnoten](#chicago-style-in-fußnoten)
-    2. [IEEE-Style im Text](#ieee-style-im-text)
-1. [Inhaltsverzeichnis Latex](#inhaltsverzeichnis-latex)
-1. [Literaturverzeichnis](#literaturverzeichnis)
-1. [Sperrvermerk](#sperrvermerk)
-1. [Quellcode einbinden](#quellcode-einbinden)
-1. [Schriftarten](#schriftarten)
-1. [PlantUML](#plantuml)
-1. [LaTeX zu PDF kompilieren](#latex-zu-pdf-kompilieren)
-    1. [Docker unter Linux / macOS / Windows](#docker-unter-linux--macos--windows)
-    2. [LaTeX-Pakete](#latex-pakete)
-    3. [Image selbst bauen](#image-selbst-bauen)
-    4. [Fehlerbehandlung](#fehlerbehandlung)
-1. [LaTeX mit Windows Subsystem for Linux kompilieren](#latex-mit-windows-subsystem-for-linux-kompilieren)
-1. [IDE zur Bearbeitung nutzen](#ide-zur-bearbeitung-nutzen)
-    1. [Texpad](#texpad)
-    2. [Visual Studio Code](#visual-studio-code)
-1. [Wörter zählen](#wörter-zählen)
-    1. [TeXcount](#texcount)
-    2. [Unix / macOS Script](#unix--macos-script)
-1. [Ich habe eine Frage oder ein Problem](#ich-habe-eine-frage-oder-ein-problem)
-1. [Ich möchte mithelfen, diese Vorlage zu verbessern](#ich-möchte-mithelfen-diese-vorlage-zu-verbessern)
-1. [Disclaimer](#disclaimer)
-1. [Lizenz](#lizenz)
+- [LaTeX-Vorlage für die FOM Hochschule für Oekonomie & Management - ITM Leitfaden](#latex-vorlage-für-die-fom-hochschule-für-oekonomie--management---itm-leitfaden)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Für die eigene Arbeit nutzen](#für-die-eigene-arbeit-nutzen)
+  - [Vorlage personalisieren](#vorlage-personalisieren)
+  - [Unterschiedliche Anforderungen](#unterschiedliche-anforderungen)
+  - [Dokumentensprache](#dokumentensprache)
+  - [TextCommands](#textcommands)
+  - [Zitation](#zitation)
+    - [IEEE-Style im Text](#ieee-style-im-text)
+  - [Inhaltsverzeichnis Latex](#inhaltsverzeichnis-latex)
+  - [Literaturverzeichnis](#literaturverzeichnis)
+  - [Sperrvermerk](#sperrvermerk)
+  - [Quellcode einbinden](#quellcode-einbinden)
+  - [Schriftarten](#schriftarten)
+  - [LaTeX zu PDF kompilieren](#latex-zu-pdf-kompilieren)
+  - [IDE zur Bearbeitung nutzen](#ide-zur-bearbeitung-nutzen)
+    - [Texpad](#texpad)
+    - [Visual Studio Code](#visual-studio-code)
+  - [Overleaf zur Bearbeitung nutzen](#overleaf-zur-bearbeitung-nutzen)
+  - [Wörter zählen](#wörter-zählen)
+  - [/tools](#tools)
+  - [Disclaimer](#disclaimer)
+  - [Lizenz](#lizenz)
 
 ## Für die eigene Arbeit nutzen
 
@@ -53,22 +46,7 @@ Um dies zu tun, gibt es mehrere Möglichkeiten, die wir nachfolgend kurz vorstel
 **Generell gilt**:
 Dieses Dokument beschreibt eine ganze Menge Details, die dir beim Erstellen und bearbeiten des Dokuments hilfreich sein könnten.
 Leider wird es unmöglich sein, jede Frage abzudecken.
-Solltest du uns kontaktieren wollen, um eine Frage zu stellen, ein Problem mit zuteilen oder um einfach nur mal Danke sagen zu wollen, eröffne doch ein [neues Issue](https://github.com/andygrunwald/FOM-LaTeX-Template/issues/new) in diesem Projekt.
-
-### Klassischer Download
-
-Über den *Clone or Download* Button in der oberen rechten Ecke kannst du dir diese Vorlage herunterladen ([ZIP-Archiv](https://github.com/andygrunwald/FOM-LaTeX-Template/archive/master.zip)).
-Danach kannst du, wie gewohnt, die Dateien lokal bearbeiten, deine Arbeit schreiben, Drucken und abgeben.
-
-### Fork auf Github
-
-Die bessere Alternative zum klassischen Download ist ein *Fork* auf Github.
-Wie das im Detail funktioniert beschreibt der Artikel [Fork A Repo](https://help.github.com/articles/fork-a-repo/).
-Das Ganze hat primär zwei Vorteile:
-
-* Du hast automatisch ein Backup deiner Arbeit auf Github
-* Andere Personen / Studenten können sich deine Arbeit ansehen, diese verbessern, diese weiter verwenden (und ggf. Zeit sparen) oder daraus lernen (bedenke, all diese Vorteile hast du auch durch dieses Projekt)
-* Wenn du es nicht mehr öffentlich zur Verfügung stellen kannst, kannst du das Projekt als *privat* markieren oder löschen
+Solltest du uns kontaktieren wollen, um eine Frage zu stellen, ein Problem mit zuteilen oder um einfach nur mal Danke sagen zu wollen, eröffne doch ein Issue in diesem Projekt.
 
 ## Vorlage personalisieren
 
@@ -76,6 +54,10 @@ Wenn du diese Vorlage nutzt, ist der erste Einstiegspunkt die Datei [`skripte/me
 In der Datei haben wir einige Variablen hinterlegt, die im Dokument (u. a. auf dem Deckblatt) genutzt werden.
 
 Ersetze die Muster-Werte durch deine persönlichen Angaben und diese werden automatisch im Dokument verwendet.
+
+## Unterschiedliche Anforderungen 
+
+Um den Anforderungen von unterschiedlichen Dozenten zu begegnen werden verschiedene Versionen der main-Branch mit den Dozenten-spezifischen Anpassungen in seperaten Branches gepflegt. 
 
 ## Dokumentensprache
 
@@ -124,70 +106,12 @@ TextCommands können bei Bedarf auch zweisprachig gepflegt werden:
 ## Zitation
 Es gibt viele Zitationsstile, deshalb schaut ihr am besten in den für euch gültigen Leitfaden und sprecht dann die präferierte/vorgegebene Zitationsweise mit eurem Dozenten ab.
 
-### Chicago-Style in Fußnoten
-**Achtung, nicht für Arbeiten in der Wirtschaftspsychologie**
-
-Das Standard-Format kann mit `\footcite[Vgl. ][Seite 1]{Balzert.2008}` genutzt werden und gibt Folgendes aus:
-
-```
-Vgl. Balzert et al. (2008), Seite 1.
-```
-
-Es besteht auch die Möglichkeit, den Vornamen des Autors mit auszugeben.
-Dazu kann der Custom-Befehl `\fullfootcite[Vgl. ][Seite 1]{Balzert.2008}` genutzt werden, der folgendes Resultat liefert:
-
-```
-Vgl. Balzert, Helmut et al. (2008), Seite 1.
-```
-
-Wird die englische Version genutzt, muss "Vgl." durch "compare" und "S." durch "p." ersetzt werden.
-Beim verwenden von [Textcommands](#textcommands) müssen "Vgl." und "S." nicht manuell geändert werden. Dies wird automatisch erledigt.
-Beispiel für die Verwendung von Textcommands (der Output sieht wie oben aus):
-```
-\footcite[\vglf][\pagef 1]{Balzert.2008}
-```
-
 ### IEEE-Style im Text
 **Achtung, nur im Hochschulbereich IT-Management**
 
+Dies ist das aktuelle Standardformat
+
 Der IEEE Zitationsstil wird hauptsächlich in technischen Studiengängen verwendet und ist ein sehr einfacher Zitationsstil, da hier nicht auf Dinge wie z.B. "vgl."/"ebd." geachtet werden muss. Ein direktes Zitat steht in Anführungszeichen. Wird ohne Anführungszeichen zitiert weiß man, dass es ein indirektes Zitat ist ("vgl." kann dann weg gelassen werden). Normalerweise müssten auch keine Seitenzahlen angegeben werden, jedoch steht im aktuellen Leitfaden des Hochschulbereichs IT-Management, dass bei jeglicher Zitationsweise die Seitenzahl anzugeben ist, deshalb auch bei IEEE.
-Um IEEE zu nutzen, müssen die Optionen des package BibLaTeX (`\usepackage[options]{biblatex}`) in der `thesis_main.tex` angepasst werden:
-```
-\usepackage[
-backend=biber,
-style=ieee,
-maxcitenames=3,	% mindestens 3 Namen ausgeben bevor et. al. kommt
-maxbibnames=999,
-date=iso,
-seconds=true, %werden nicht verwendet, so werden aber Warnungen unterdrückt.
-urldate=iso,
-dashed=false,
-autocite=inline,
-useprefix=true, % 'von' im Namen beachten (beim Anzeigen)
-mincrossrefs = 1
-]{biblatex}%iso dateformat für YYYY-MM-DD
-```
-Des Weiteren müssen die Modifikationen für BibLaTeX auskommentiert werden:
-```
-%\input{skripte/modsBiblatex2018}
-```
-Nach dem Auskommentieren der Modifikationen für das Literaturverzeichnis stimmt es leider nicht mehr zu 100% mit den Vorgaben überein, wobei der Leitfaden hier auch sehr vage formuliert ist. Am besten mit dem Dozenten sprechen, ob das BibLaTeX-Format passt. 
-
-Durch das Auskommentieren der BibLaTeX Modifikationen müssen im Anschluss folgende Zeilen hinzugefügt werden:
-```
-%% et al. anstatt u. a. bei mehr als drei Autoren.
-\DefineBibliographyStrings{ngerman}{ 
-	andothers = {{et\,al\adddot}},             
-}
-\DefineBibliographyStrings{english}{ 
-	andothers = {{et\,al\adddot}},             
-}
-```
-
-Im Text kann anschließend mit `\cite[S.~99]{Kornmeier2018}` oder `\cite[S.~99-102]{Kornmeier2018}` oder `\cite{Kornmeier2018}` zitiert werden:
-```
-Im Text kann anschließend mit [1, S. 99] oder [1, S. 99-102] oder [1] zitiert werden.
-```
 
 ## Inhaltsverzeichnis Latex
 
@@ -271,24 +195,6 @@ Die voreingestellte Schriftart enthält Serifen. Mit den folgenden Zeilen kann i
 \renewcommand\familydefault{\sfdefault}
 ```
 
-## PlantUML
-PlantUML ist ein Open-Source-Tool, mit dem UML-Diagramme aus einfacher Textsprache erstellt werden können.
-
-Um PlantUml benutzen zu können, müssen folgende Voraussetzungen erfüllt sein:
-
-* Das Prozentzeichen muss vor der Zeile `\usepackage{plantuml}` in der `thesis_main.tex` entfernt werden
-* Der PlantUML Code muss von `\begin{plantuml}` `\end{plantuml}` umhüllt werden
-* Die `plantuml.jar` muss vorhanden sein, Download unter [PlantUML](https://sourceforge.net/projects/plantuml/files/plantuml.jar/download)
-* Kopiere die `plantuml.jar` zu einem lokalen Ordner (z.B., `mkdir -p ~/bin/plantuml && cp ~/Downloads/plantuml.jar ~/bin/plantuml`)
-* Installiere Graphviz (PlantUML ist davon abhängig).
-
-Folgendes muss in der `~/.bashrc` oder `zshconfig` sein:
-
-```
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home'
-export PLANTUML_JAR='$HOME/bin/plantuml/plantuml.jar'
-export GRAPHVIZ_DOT='/usr/local/bin/dot'
-```
 
 ## LaTeX zu PDF kompilieren
 
@@ -300,81 +206,6 @@ Benutzer von **macOS** und **Linux** verwenden bitte die ```compile.sh```.
 
 
 Wenn das Kompilieren nicht ohne Fehler möglich ist, kontrolliert bitte ganz genau eure LaTeX-Versionen oder nutzt Docker.
-
-
-### Docker unter Linux / macOS / Windows
-
-Mit Docker wird das Dokument direkt in einem isolierten Container kompiliert.
-In diesem Container sind alle Vorraussetzungen mit der richtigen Software und den richtigen Versionen gegeben.
-
-Voraussetzung ist eine installierte [Docker engine](https://docs.docker.com/engine/installation/).
-
-Um die **PDF-Datei ohne die Installation der LaTeX-Pakete zu kompilieren, muss folgender Befehl in eurem Projekt-Ordner** ( da wo die compile.sh bzw compile.bat liegt) ausgeführt werden:
-
-```
-docker-compose up
-```
-
-
-Den Befehl lasst ihr einfach über eure Kommandozeile bzw. PowerShell laufen (in Windows cmd.exe bzw. powershell.exe, beim Mac ist es das Terminal). Zum Projektordner könnt ihr kommen, indem ihr über den cd Befehl dorthin navigiert oder im Windows-Explorer in diesen Ordner wechselt und dann bei gedrückter Shift-Taste die rechte Maus-Taste klickt. Dort müsst ihr dann im Menü den Eintrag: "Öffne Kommandozeile hier" auswählen.
-
-Falls es hier zu Problemen kommt, wenn ein gecachtes Image verwendet wird, können die folgenden Befehle ausgeführt werden:
-
-```
-docker-compose build --no-cache
-docker-compose up
-```
-
-Wird Docker unter Windows 10 verwendet, muss der Daemon wie folgt konfiguriert werden:
-
-![Docker Konfiguration unter Windows 10](https://cloud.githubusercontent.com/assets/6319666/17108377/7c3aef54-5293-11e6-95e3-bd99f42820f0.png)
-
-Die benötigten Pakete befinden sich in dem Docker-Image, welches auf [Docker Hub unter andygrunwald/fom-latex-template](https://hub.docker.com/r/andygrunwald/fom-latex-template/) zur Verfügung steht.
-Es wird bei der Ausführung automatisch heruntergeladen.
-
-### LaTeX-Pakete
-
-Für das kompilieren ohne Docker ist LaTeX Grundvoraussetzung.
-Wenn Du _[MikTex](http://miktex.org/)_ oder _[MacTex](http://tug.org/mactex/)_ verwendest, dann brauchst Du keine weiteren LaTeX-Pakete installieren.
-
-Weiterhin wird _[Biblatex](http://www.ctan.org/pkg/biblatex)_ und _Biber_ (>= Version 1.8) für das Literaturverzeichnisses benötigt.
-
-### Fehlerbehandlung
-
-Falls unter Windows der folgende Fehler auftritt, checkt `git` die Dateien mit Windows Line Endings aus. Dies verursacht im Ubuntu Container einen Fehler.
-
-```
-  env: bash\r: No such file or directory
-```
-
-Mit dem folgenden Befehl kann man `git` dazu zwingen alle Dateien mit UNIX Zeilenendungen zu laden (siehe [stackoverflow](https://stackoverflow.com/questions/29045140/env-bash-r-no-such-file-or-directory)):
-
-```
-git config --global core.autocrlf true
-```
-
-#### Image selbst bauen
-
-Wenn Du das Docker Image selbst bauen möchtest, kannst Du es mit dem nachfolgenden Befehl tun:
-
-```
-docker build -t andygrunwald/fom-latex-template .
-```
-
-## LaTeX mit Windows Subsystem for Linux kompilieren 
-Eine mögliche Alternative zu Docker:
-
-1. WSL und Distribution installieren und konfigurieren (siehe [Microsoft Docs](https://docs.microsoft.com/en-US/windows/wsl/install-win10))
-1. Fork des Repositories erzeugen (siehe oben) und Dein Repository klonen (siehe [Github](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)) 
-1. TexLive und benötigte Pakete installieren 
-```
-sudo apt-get install texlive texlive-lang-german texlive-latex-extra texlive-bibtex-extra texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-lang-german texlive-luatex biber xz-utils
-```
-4. Installation überprüfen, durch Erzeugen der PDF-Datei.
-```
-./compile.sh
-```
-5. (optional) Visual Studio Code mit Extension "Remote - WSL" benutzen (siehe [Microsoft VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl&WT.mc_id=-blog-scottha))
 
 
 ## IDE zur Bearbeitung nutzen
@@ -416,36 +247,12 @@ Zum Einbinden dieser Vorlage in Overleaf gibt es zwei Möglichkeiten:
 
 Gerade bei der Verwendung eines Texteditors ist das Zählen der Wörter unter umständen eine mühselige Aufgabe. Mit den folgenden Vorschlägen kann man die Wörter der Arbeit zählen:
 
-### TeXcount
+- Über die Seite [TeXcount](https://app.uio.no/ifi/texcount/online.php) können Latex Dateien hochgeladen und gezählt werden.
+- Unter Unix und macOS kann das mitgelieferte Script helfen die Wörter zu zählen. Dafür muss nur [detex](https://github.com/pkubowicz/opendetex) installiert werden. Unter macOS kann `detex` mittels [homebrew](https://brew.sh/index_de) über den Befehl `brew install opendetex` installiert werden. Das Skript wird einfach über `sh ./countwords.sh` gestartet.
 
-Über die Seite [TeXcount](https://app.uio.no/ifi/texcount/online.php) können Latex Dateien hochgeladen und gezählt werden.
+## /tools 
 
-### Unix / macOS Script
-
-Unter Unix und macOS kann das mitgelieferte Script helfen die Wörter zu zählen. Dafür muss nur [detex](https://github.com/pkubowicz/opendetex) installiert werden. Unter macOS kann `detex` mittels [homebrew](https://brew.sh/index_de) über den Befehl `brew install opendetex` installiert werden.
-
-Das Skript wird einfach über `sh ./countwords.sh` gestartet.
-
-## Ich habe eine Frage oder ein Problem
-
-Ab und zu kommt es vor, dass es nicht klappt wie beschrieben oder man eine Frage hat.
-Ich würde euch bitten mir nicht persönlich eine E-Mail zu schreiben, sondern lieber ein [neues Issue](https://github.com/andygrunwald/FOM-LaTeX-Template/issues/new) in diesem Projekt eröffnet.
-Dies hat folgende Vorteile:
-
-* andere Personen können zur Lösung beitragen (weil sie diese ggf. auch hatten)
-* wir haben eine Dokumentation an vorhandenen und gelösten Fehlern / Fragen
-* gelöste / wiederkehrende Probleme müssen nicht erneut beantwortet werden
-
-## Ich möchte mithelfen, diese Vorlage zu verbessern
-
-Verbesserungen an dieser Vorlage sind stets erwünscht und willkommen.
-Github (diese Plattform) selbst ist dafür gemacht, um zusammen an Open Source Projekten zu arbeiten.
-Deswegen werden Änderungen über [Pull Requests](https://github.com/andygrunwald/FOM-LaTeX-Template/pulls) sehr gerne entgegen genommen.
-
-Wenn du das erste mal mit [Git](https://git-scm.com/), [Github](https://github.com/) und Pull Requests arbeitest, können dir folgende zwei Artikel weiter helfen:
-
-* [Using pull requests](https://help.github.com/articles/using-pull-requests/)
-* [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
+Hier finden sich verschiedene Python-Skripte die als Basis zur Generierung von spezifischen Graphen z.B Wordclouds oder Pie-Charts aus der Bibliografie genutzt werden. Diese Skripte benötigen manuelle Anpassungen und werden nicht mit allen Bibliografien standardmäßig funktionieren.
 
 ## Disclaimer
 
